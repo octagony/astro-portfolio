@@ -1,0 +1,38 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Body from '../components/Body.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
+import ThemeToggle from '../components/ThemeToggleButton'
+import MainContent from '../components/MainContent.astro'
+import Project from '../components/Project.astro'
+import {Image} from "@astrojs/image/components"
+
+const projects = (await Astro.glob("./projects/*.md")).sort((a:any,b:any)=>
+  new Date(b.frontmatter.createdAt).valueOf() - new Date(a.frontmatter.createdAt).valueOf()
+)
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header/>
+    <main class="pt-20">
+      <MainContent>
+        <section class="">
+          <h1 class="text-3xl text-center">Wow, you find treasure!</h1>
+          <div class="text-center py-4">
+            Nah, just kidding. Go back to 
+             <a class="text-cyan-700 dark:text-pink-400" href="/">main page!</a>
+          </div>
+        </section>
+      <MainContent/>
+    </main>
+    <Footer />
+     <ThemeToggle client:load/>
+  </Body>
+</html>
