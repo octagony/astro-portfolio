@@ -3,6 +3,9 @@ description: Brand Shop
 public: true
 layout: ../../layouts/BlogPost.astro
 title: UGMONK
+tools:
+  - HTML
+  - SCSS
 createdAt: 1663138523826
 updatedAt: 1663138544071
 heroImage: /projects/ugmonk-image.jpg

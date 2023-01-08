@@ -1,15 +1,15 @@
 ---
-description: Crypto Theme
+description: HR Outsorcing
 public: true
 layout: ../../layouts/BlogPost.astro
-title: Diplex
+title: Clerksy
 tools:
   - HTML
   - SCSS
 createdAt: 1663138523826
 updatedAt: 1663138544071
-heroImage: /projects/diplex-image.jpg
-slug: diplex-crypto
+heroImage: /projects/clerksy-image.jpg
+slug: clerksky-hr-outsorcing
 ---
 
 <div>Elit iure et aut provident inventore nam. Rerum ullam ipsum ut corporis deleniti nisi accusantium Fugiat et ea ab fuga nemo? Officia quidem sunt odio excepturi eligendi non, atque eaque?</div>

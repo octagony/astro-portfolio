@@ -24,22 +24,4 @@ export default defineConfig({
     }),
     tailwind(),
   ],
-  markdown: {
-    extendDefaultPlugins: true,
-    rehypePlugins: [
-      [
-        addClasses,
-        {
-          h1: "text-4xl font-bold font-heebo",
-          h2: "text-2xl font-bold font-heebo",
-          h3: "text-xl font-bold font-heebo",
-          h4: "text-lg font-bold font-heebo",
-          h5: "font-bold font-heebo",
-          h6: "font-bold font-heebo",
-          img: "border border-slate-300 dark:border-zinc-700 rounded-xl mb-6",
-          a: "underline underline-offset-2 hover:text-pink-500 decoration-pink-500",
-        },
-      ],
-    ],
-  },
 });
