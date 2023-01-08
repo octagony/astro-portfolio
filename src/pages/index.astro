@@ -1,8 +1,10 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
+import Body from '../components/Body.astro'
 import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+import ThemeToggle from '../components/ThemeToggleButton'
 ---
 
 <!DOCTYPE html>
@@ -10,7 +12,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <Body>
     <Header title={SITE_TITLE} />
     <main>
       <h1 class="font-heebo">🧑‍🚀 Hello, Astronaut!</h1>
@@ -60,5 +62,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
       </p>
     </main>
     <Footer />
-  </body>
+     <ThemeToggle client:load/>
+  </Body>
 </html>
