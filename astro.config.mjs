@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -13,6 +13,14 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://github.com/octagony',
-  integrations: [mdx(), sitemap(), react(), image(), tailwind()]
+  site: "https://github.com/octagony",
+  integrations: [
+    mdx(),
+    sitemap(),
+    react(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    tailwind(),
+  ],
 });
