@@ -21,14 +21,16 @@ const projects = (await Astro.glob("./projects/*.md")).sort((a:any,b:any)=>
   </head>
   <Body>
     <Header title={SITE_TITLE} />
-    <main class="pt-20">
-      <h1 class="font-heebo text-center">Mikhail Rutsky</h1>
+    <main class="pt-20 font-heebo">
       <MainContent>
         <section>
-          <p class="mb-8 indent-4"> 
-          Hi, I&apos;m Mikhail - Frontend-developer from Minsk. As a developer, I&apos;m always interested in learning new technologies and applying them in action. I invite you to see my projects, hope you will like them      
-  <a class='inline-flex items-center gap-1 indent-1 text-pink-400' href={HOMEPAGE_URL} >Learn More about me</a>            
-</p>
+          <div class="flex justify-between items-center mb-10">
+            <h1 class="text-5xl">Mikhail <br> Rutsky</h1>
+            <p class=""> 
+                Frontend-developer <br> {new Date().getFullYear() - 2000} years old, Minsk
+            </p>
+          </div>
+          <a class='w-full text-center block indent-1 text-indigo-500 dark:text-pink-400 mb-8' href={HOMEPAGE_URL} >Learn More about me</a>            
         </section>
         <section>
           <section>
