@@ -1,19 +1,17 @@
 import { Menu, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
-import { IoMenu } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 import { HOMEPAGE_URL } from "../config";
 import DropdownMenuItem from "./DropdownMenuItem";
+import MenuButton from "./MenuButton";
 
 const DropdownMenu = () => {
   return (
     <Menu as="div" className="inlline-block text-left">
       <div>
-        <Menu.Button
-          className="inline-flex justify-center rounded-md border border-stone-400 dark:border-stone-700 px-2 py-2 text-sm font-medium shadow-sm hover:bg-orange-200 dark:hover:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 transition-all"
-          aria-label="menu"
-        >
+        <MenuButton>
           <IoMenu className="h-5 w-5" />
-        </Menu.Button>
+        </MenuButton>
       </div>
       <Transition
         as={Fragment}
@@ -26,11 +24,14 @@ const DropdownMenu = () => {
       >
         <Menu.Items className="absolute top-0 left-0 h-full w-full">
           <div className="py-1">
-            <div className="px-3 py-2 uppercase font-bold text-xs flex flex-col h-screen items-center justify-center gap-12">
+            <div className="px-3 py-2 uppercase font-bold text-3xl flex flex-col h-screen items-center justify-center gap-12 bg-white dark:bg-neutral-900">
               <DropdownMenuItem href="/about">About me</DropdownMenuItem>
               <DropdownMenuItem href="/projects">Projects</DropdownMenuItem>
               <DropdownMenuItem href="/contacts">Contacts</DropdownMenuItem>
               <DropdownMenuItem href={HOMEPAGE_URL}>GitHub</DropdownMenuItem>
+              <MenuButton>
+                <IoClose className="h-5 w-5" />
+              </MenuButton>
             </div>
           </div>
         </Menu.Items>

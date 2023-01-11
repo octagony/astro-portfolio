@@ -15,8 +15,8 @@ const DropdownMenuItem = ({ href, children }: IMenu) => {
         <a
           href={href}
           className={classNames(
-            active ? "bg-orange-200 dark:bg-pink-700" : "",
-            "block px-4 py-2 text-sm"
+            active ? "bg-indigo-200 dark:bg-pink-900 transition-all" : "",
+            "block px-4 py-2 text-3xl rounded-xl"
           )}
         >
           {children}
