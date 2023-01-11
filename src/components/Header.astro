@@ -9,6 +9,7 @@ import DropdownMenu from './DropdownMenu';
     <nav
       class="flex py-5 justify-between items-center gap-3 text-base border-b border-b-black border-opacity-25"
     >
+      <div class="hidden md:flex md:justify-between w-full">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/about">About me</HeaderLink>
       <HeaderLink href="/projects">Projects</HeaderLink>
@@ -17,7 +18,11 @@ import DropdownMenu from './DropdownMenu';
         <IoLogoGithub />
         GitHub
       </HeaderLink>
+      </div>
+      <div class="md:hidden">
+        
       <DropdownMenu client:visible/>
+      </div>
     </nav>
   </div>
 </header>
