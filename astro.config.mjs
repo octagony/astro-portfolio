@@ -36,7 +36,7 @@ export default defineConfig({
           h4: "text-lg font-bold font-heebo",
           h5: "font-bold font-heebo",
           h6: "font-bold font-heebo",
-          img: "border border-slate-300 dark:border-zinc-700 rounded-xl mb-6",
+          img: "border border-slate-300 dark:border-stone-700 rounded-xl mb-6",
           a: "underline underline-offset-2 hover:text-pink-500 decoration-pink-500",
         },
       ],
