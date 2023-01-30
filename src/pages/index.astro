@@ -36,13 +36,12 @@ const projects = (await Astro.glob("./projects/*.md")).sort((a:any,b:any)=>
           <section>
             <ul class="flex flex-col gap-5 md:gap-10">
               {projects.map(project => (
-                <li class="text-center mb-4">
+                <li class="text-center">
                   <Image src={project.frontmatter.heroImage} class='border border-slate-300 dark:border-neutral-700 rounded-xl' width={1440} aspectRatio={2.0} alt="project image"/>
                   <a href={project.url}>
                     <div class="mt-3 text-xl">
-                      {project.frontmatter.title}
+                      {project.frontmatter.title} - {project.frontmatter.description}
                     </div>
-                    <div class="opacity-70">{project.frontmatter.description}</div>
                   </a>
                 </li>
               ))}
