@@ -1,0 +1,30 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
+import Body from '../components/Body.astro'
+import Header from '../components/Header.astro'
+import MainContent from "../components/MainContent.astro";
+import Footer from "../components/Footer.astro";
+import ThemeToggle from "../components/ThemeToggleButton";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+     <main class="pt-20 font-heebo">
+      <MainContent>
+        <section class="flex flex-col text-center min-h-screen">
+            <h1 class="text-4xl">Mikhail Rutsky</h1>
+            <h3 class="text-2xl pt-2">Octagony</h1>
+          <p class="text-left text-lg pt-2">Sit aperiam tempore totam eveniet modi dolor placeat deserunt Repellendus alias quidem reiciendis aperiam nam Non dicta adipisci sint magnam cupiditate. Nisi libero dignissimos quam in dicta? Ad quas adipisci nulla maiores voluptas Rem soluta fugiat maiores qui optio, adipisci ipsam a Eos modi illo quo molestias impedit reprehenderit Sint molestias tempore debitis voluptas ex Maiores dolorem nulla repellat quaerat eos? Consequuntur perferendis a nostrum minima doloremque. Facere minima vel nam non voluptates Consectetur sapiente ipsa sunt debitis alias officia at quibusdam Velit hic corrupti eligendi quam accusantium! Ducimus a deleniti perferendis unde magni. Enim facilis quas consectetur non iste.</p> 
+        </section>
+          </div>
+     </MainContent>
+      </main>
+    <Footer />
+     <ThemeToggle client:load/>
+  </Body>
