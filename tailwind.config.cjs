@@ -7,6 +7,15 @@ module.exports = {
       fontFamily: {
         heebo: ["Heebo", "Verdana", "sans-serif"],
       },
+      keyframes: {
+        scroll: {
+          '0%': {  left:'0' },
+          '100%': { left:'-100%' },
+        }
+      },
+      animation: {
+        scroll: 'scroll 10s linear infinite'
+      }
     },
   },
   plugins: [],
