@@ -1,48 +1,62 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Body from "../components/Body.astro"
-import MainContent from '../components/MainContent.astro';
+import BaseHead from "../components/astro/BaseHead.astro";
+import Header from "../components/astro/Header.astro";
+import Footer from "../components/astro/Footer.astro";
+import Body from "../components/astro/Body.astro";
+import MainContent from "../components/astro/MainContent.astro";
+import ThemeToggle from '../components/tsx/ThemeToggleButton';
 
 export interface Props {
-	content: {
-		title: string;
-		pubDate?: string;
-    description? : string;
-		updatedDate?: string;
-		heroImage?: string;
-    tools: string[]
-	};
+  content: {
+    title: string;
+    pubDate?: string;
+    description?: string;
+    updatedDate?: string;
+    heroImage?: string;
+    tools: string[];
+  };
 }
 
 const {
-	content: { title, description, pubDate,  heroImage, tools },
+  content: { title, description, pubDate, heroImage, tools },
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+  <head>
+    <BaseHead title={title} description={description!} />
+  </head>
 
-	<Body>
-		<Header />
-		<main class="pt-20">
+  <Body>
+    <Header />
+    <main class="pt-20">
       <MainContent classname="mb-8 text-center">
-			<div class='mb-8'>
-				{heroImage && <img class="border-slate-300 dark:border-neutral-700 rounded-xl" width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="text-3xl my-1 font-heebo">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
+        <div class="mb-8">
+          {
+            heroImage && (
+              <img
+                class="border-slate-300 dark:border-neutral-700 rounded-xl"
+                width={720}
+                height={360}
+                src={heroImage}
+                alt=""
+              />
+            )
+          }
+          <h1 class="text-3xl my-1 font-heebo">{title}</h1>
+          {pubDate && <time>{pubDate}</time>}
           {description}
         </div>
-        {tools.map(tool =>  tool + ' ')}
-				<hr class="border-top border-neutral-400 my-4" />
-				<slot />
-        <span class="underline underline-offset-2 hover:text-pink-400 decoration-pink-400 text-2xl"></span>
+        {tools.map((tool) => tool + " ")}
+        <hr class="border-top border-neutral-400 my-4" />
+        <slot />
+        <span
+          class="underline underline-offset-2 hover:text-pink-400 decoration-pink-400 text-2xl"
+        ></span>
       </MainContent>
-		</main>
-		<Footer />
-	</Body>
+    </main>
+    <Footer />
+    <ThemeToggle client:load />
+  </Body>
 </html>

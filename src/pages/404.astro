@@ -1,13 +1,12 @@
 ---
-import BaseHead from '../components/BaseHead.astro'
-import Header from '../components/Header.astro'
-import Body from '../components/Body.astro'
-import Footer from '../components/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
-import ThemeToggle from '../components/ThemeToggleButton'
-import MainContent from '../components/MainContent.astro'
-import Project from '../components/Project.astro'
-import {Image} from "@astrojs/image/components"
+import BaseHead from '../components/astro/BaseHead.astro'
+import Header from '../components/astro/Header.astro'
+import Body from '../components/astro/Body.astro'
+import Footer from '../components/astro/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION} from '../config'
+import ThemeToggle from '../components/tsx/ThemeToggleButton'
+import MainContent from '../components/astro/MainContent.astro'
+
 
 const projects = (await Astro.glob("./projects/*.md")).sort((a:any,b:any)=>
   new Date(b.frontmatter.createdAt).valueOf() - new Date(a.frontmatter.createdAt).valueOf()
@@ -30,7 +29,7 @@ const projects = (await Astro.glob("./projects/*.md")).sort((a:any,b:any)=>
              <a class="text-cyan-700 dark:text-pink-400" href="/">main page!</a>
           </div>
         </section>
-      <MainContent/>
+      </MainContent>
     </main>
     <Footer />
      <ThemeToggle client:load/>

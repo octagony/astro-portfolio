@@ -26,9 +26,9 @@ const Skills = () => {
   ];
   return (
     <>
-      <div className="text-xs flex items-center mb-5 justify-center">
-        <div className="w-[200%] h-10 border-t border-b overflow-hidden border-gray-600 relative">
-          <div className="w-[200%] flex items-center h-10 justify-around absolute left-0 animate-scroll gap-5">
+      <div className="text-lg flex items-center mb-5 justify-center">
+        <div className="w-[200%] h-12 border-t border-b overflow-hidden border-gray-600 relative">
+          <div className="w-[200%] flex items-center h-12 justify-around absolute left-0 animate-scroll gap-5">
             {skills.slice(0, skills.length / 2).map((skill, idx) => {
               return (
                 <div key={idx} className="flex justify-center items-start w-20">
@@ -39,9 +39,9 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className="text-xs flex items-center mb-5 justify-center">
-        <div className="w-[200%] h-10 border-t border-b overflow-hidden border-gray-600 relative">
-          <div className="w-[200%] flex items-center h-10 justify-around absolute left-0  animate-scroll_revere gap-5">
+      <div className="text-lg flex items-center mb-5 justify-center">
+        <div className="w-[200%] h-12 border-t border-b overflow-hidden border-gray-600 relative">
+          <div className="w-[200%] flex items-center h-12 justify-around absolute left-0  animate-scroll_revere gap-5">
             {skills.slice(skills.length / 2, -1).map((skill, idx) => {
               return (
                 <div key={idx} className="flex justify-center items-start w-20">
