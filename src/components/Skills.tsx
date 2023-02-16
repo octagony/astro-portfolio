@@ -9,6 +9,7 @@ const Skills = () => {
     "Tailwind",
     "Bootstrap",
     "JavaScript",
+    "Typescript",
     "jQuery",
     "React",
     "Router",
@@ -24,22 +25,34 @@ const Skills = () => {
     "Preact",
   ];
   return (
-    <div className="text-xs flex items-center mb-8 justify-center">
-      <div className="w-[200%] h-20 border-t border-b border-gray-600 relative">
-        <div className="w-[200%] flex items-center h-20 justify-around absolute left-0 animate-scroll gap-20">
-          {skills.map((skill, idx) => {
-            return (
-              <div
-                key={idx}
-                className="flex justify-center items-start w-[20rem]"
-              >
-                <p>{skill}</p>
-              </div>
-            );
-          })}
+    <>
+      <div className="text-xs flex items-center mb-5 justify-center">
+        <div className="w-[200%] h-10 border-t border-b overflow-hidden border-gray-600 relative">
+          <div className="w-[200%] flex items-center h-10 justify-around absolute left-0 animate-scroll gap-5">
+            {skills.slice(0, skills.length / 2).map((skill, idx) => {
+              return (
+                <div key={idx} className="flex justify-center items-start w-20">
+                  <p>{skill}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+      <div className="text-xs flex items-center mb-5 justify-center">
+        <div className="w-[200%] h-10 border-t border-b overflow-hidden border-gray-600 relative">
+          <div className="w-[200%] flex items-center h-10 justify-around absolute left-0  animate-scroll_revere gap-5">
+            {skills.slice(skills.length / 2, -1).map((skill, idx) => {
+              return (
+                <div key={idx} className="flex justify-center items-start w-20">
+                  <p>{skill}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

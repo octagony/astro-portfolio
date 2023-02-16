@@ -9,13 +9,18 @@ module.exports = {
       },
       keyframes: {
         scroll: {
-          '0%': {  left:'0' },
-          '100%': { left:'-100%' },
-        }
+          "0%": { left: "0%" },
+          "100%": { left: "-100%" },
+        },
+        scroll_reverse: {
+          "0%": { left: "-100%" },
+          "100%": { left: "0" },
+        },
       },
       animation: {
-        scroll: 'scroll 10s linear infinite'
-      }
+        scroll: "scroll 10s linear infinite",
+        scroll_revere: "scroll_reverse 10s linear infinite",
+      },
     },
   },
   plugins: [],
