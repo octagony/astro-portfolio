@@ -40,7 +40,7 @@ const Skills = () => {
         </div>
       </div>
       <div className="text-lg flex items-center mb-5 justify-center">
-        <div className="w-[200%] h-12 border-t border-b overflow-hidden border-gray-600 relative">
+        <div className="w-[200%] h-12 border-t border-b overflow-hidden border-gray-500 relative">
           <div className="w-[200%] flex items-center h-12 justify-around absolute left-0  animate-scroll_revere gap-5">
             {skills.slice(skills.length / 2, -1).map((skill, idx) => {
               return (

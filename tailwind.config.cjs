@@ -16,10 +16,15 @@ module.exports = {
           "0%": { left: "-100%" },
           "100%": { left: "0" },
         },
+        spin_logo: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         scroll: "scroll 10s linear infinite",
         scroll_revere: "scroll_reverse 10s linear infinite",
+        spin_logo: "spin_logo 25s infinite",
       },
     },
   },

@@ -1,16 +1,17 @@
 ---
-import BaseHead from '../components/astro/BaseHead.astro'
-import Header from '../components/astro/Header.astro'
-import Body from '../components/astro/Body.astro'
-import Footer from '../components/astro/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION} from '../config'
-import ThemeToggle from '../components/tsx/ThemeToggleButton'
-import MainContent from '../components/astro/MainContent.astro'
+import BaseHead from "../components/astro/BaseHead.astro";
+import Header from "../components/astro/Header.astro";
+import Body from "../components/astro/Body.astro";
+import Footer from "../components/astro/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import ThemeToggle from "../components/tsx/ThemeToggleButton";
+import MainContent from "../components/astro/MainContent.astro";
 
-
-const projects = (await Astro.glob("./projects/*.md")).sort((a:any,b:any)=>
-  new Date(b.frontmatter.createdAt).valueOf() - new Date(a.frontmatter.createdAt).valueOf()
-)
+const projects = (await Astro.glob("./projects/*.md")).sort(
+  (a: any, b: any) =>
+    new Date(b.frontmatter.createdAt).valueOf() -
+    new Date(a.frontmatter.createdAt).valueOf()
+);
 ---
 
 <!DOCTYPE html>
@@ -19,19 +20,19 @@ const projects = (await Astro.glob("./projects/*.md")).sort((a:any,b:any)=>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <Body>
-    <Header/>
+    <Header />
     <main class="pt-20">
       <MainContent>
         <section>
           <h1 class="text-3xl text-center">Wow, you find treasure!</h1>
           <div class="text-center py-4">
-            Nah, just kidding. Go back to 
-             <a class="text-cyan-700 dark:text-pink-400" href="/">main page!</a>
+            Nah, just kidding. Go back to
+            <a class="text-cyan-700 dark:text-pink-400" href="/">main page!</a>
           </div>
         </section>
       </MainContent>
     </main>
     <Footer />
-     <ThemeToggle client:load/>
+    <ThemeToggle client:load />
   </Body>
 </html>
