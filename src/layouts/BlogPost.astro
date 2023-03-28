@@ -1,62 +1,98 @@
 ---
-import BaseHead from "../components/astro/BaseHead.astro";
-import Header from "../components/astro/Header.astro";
-import Footer from "../components/astro/Footer.astro";
-import Body from "../components/astro/Body.astro";
-import MainContent from "../components/astro/MainContent.astro";
-import ThemeToggle from '../components/tsx/ThemeToggleButton';
+import { AiFillGithub } from 'react-icons/ai'
+import { CgWebsite } from 'react-icons/cg'
+import BaseHead from '../components/astro/BaseHead.astro'
+import Body from '../components/astro/Body.astro'
+import Footer from '../components/astro/Footer.astro'
+import Header from '../components/astro/Header.astro'
+import MainContent from '../components/astro/MainContent.astro'
+import ThemeToggle from '../components/tsx/ThemeToggleButton'
 
 export interface Props {
-  content: {
-    title: string;
-    pubDate?: string;
-    description?: string;
-    updatedDate?: string;
-    heroImage?: string;
-    tools: string[];
-  };
+	content: {
+		title: string
+		pubDate?: string
+		description?: string
+		updatedDate?: string
+		heroImage?: string
+		tools: string[]
+		githubLink: string
+		websiteLink: string
+	}
 }
 
 const {
-  content: { title, description, pubDate, heroImage, tools },
-} = Astro.props;
+	content: {
+		title,
+		description,
+		pubDate,
+		heroImage,
+		tools,
+		githubLink,
+		websiteLink,
+	},
+} = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description!} />
-  </head>
+<html lang='en'>
+	<head>
+		<BaseHead title={title} description={description!} />
+	</head>
 
-  <Body>
-    <Header />
-    <main class="pt-20">
-      <MainContent classname="mb-8 text-center">
-        <div class="mb-8">
-          {
-            heroImage && (
-              <img
-                class="border-slate-300 dark:border-neutral-700 rounded-xl"
-                width={720}
-                height={360}
-                src={heroImage}
-                alt=""
-              />
-            )
-          }
-          <h1 class="text-3xl my-1 font-heebo">{title}</h1>
-          {pubDate && <time>{pubDate}</time>}
-          {description}
-        </div>
-        {tools.map((tool) => tool + " ")}
-        <hr class="border-top border-neutral-400 my-4" />
-        <slot />
-        <span
-          class="underline underline-offset-2 hover:text-pink-400 decoration-pink-400 text-2xl"
-        ></span>
-      </MainContent>
-    </main>
-    <Footer />
-    <ThemeToggle client:load />
-  </Body>
+	<Body>
+		<Header />
+		<MainContent classname='mb-2 text-center pt-20 text-base'>
+			<div class='mb-4'>
+				{
+					heroImage && (
+						<img
+							class='border-slate-300 dark:border-neutral-700 rounded-xl'
+							width={720}
+							height={360}
+							src={heroImage}
+							alt=''
+						/>
+					)
+				}
+				<h1 class='text-3xl my-4 font-heebo'>{title}</h1>
+				{pubDate && <time>{pubDate}</time>}
+				{description}
+			</div>
+			<div class='flex flex-wrap justify-center items-center gap-4'>
+				{
+					tools.map(tool => {
+						return (
+							<span class='bg-indigo-500 dark:bg-pink-600 p-2 rounded-xl text-base text-white'>
+								{tool}
+							</span>
+						)
+					})
+				}
+			</div>
+			<hr class='border-top border-neutral-400 my-4' />
+			<slot />
+			<span
+				class='underline underline-offset-2 hover:text-pink-400 decoration-pink-400 text-2xl'
+			></span>
+			<div
+				class='flex sm:justify-evenly flex-col sm:flex-row gap-4 text-center mt-4 items-center'
+			>
+				<div
+					class='flex flex-row items-center gap-2 text-center bg-indigo-500 dark:bg-pink-600 p-2 rounded-xl text-base text-white'
+				>
+					<AiFillGithub />
+					<a href={githubLink} target='_blank'>Link to project on Github</a>
+				</div>
+				<div
+					class='flex flex-row items-center gap-2 bg-indigo-500 dark:bg-pink-600 p-2 rounded-xl text-base text-white'
+				>
+					<CgWebsite />
+					<a href={websiteLink} target='_blank'>Link to website project</a>
+				</div>
+			</div>
+		</MainContent>
+	</Body>
+	<Footer />
+	<ThemeToggle client:load />
 </html>

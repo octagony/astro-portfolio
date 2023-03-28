@@ -1,46 +1,51 @@
 ---
-import BaseHead from "../components/astro/BaseHead.astro";
-import Body from "../components/astro/Body.astro";
-import Footer from "../components/astro/Footer.astro";
-import Header from "../components/astro/Header.astro";
-import MainContent from "../components/astro/MainContent.astro";
-import ThemeToggle from "../components/tsx/ThemeToggleButton";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
-import { BsTelegram , BsLinkedin } from "react-icons/bs";
-import {AiOutlineMail} from 'react-icons/ai';
+import { AiOutlineMail } from 'react-icons/ai'
+import { BsLinkedin, BsTelegram } from 'react-icons/bs'
+import BaseHead from '../components/astro/BaseHead.astro'
+import Body from '../components/astro/Body.astro'
+import Footer from '../components/astro/Footer.astro'
+import Header from '../components/astro/Header.astro'
+import MainContent from '../components/astro/MainContent.astro'
+import ThemeToggle from '../components/tsx/ThemeToggleButton'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <Body>
-    <Header title={SITE_TITLE} />
-    <main class="pt-20 font-heebo">
-      <MainContent>
-        <section class="min-h-[85vh]">
-          <h2 class="text-center text-2xl">
-            You can always find me at the following addresses:
-          </h2>
-          <div class="flex flex-col sm:flex-row sm:justify-between items-center gap-4 my-12 px-6">
-            <div class="p-2 text-center mb-4">
-              <BsTelegram size={40} className="mx-auto my-2" />
-              <a href="https://t.me/tnotu">Telegram</a>
-            </div>
-            <div class="p-2 text-center mb-4">
-              <AiOutlineMail size={40} className="mx-auto my-2" />
-              <a href="mailto:moctagony@gmail.com">Email</a>
-            </div>
-            <div class="p-2 text-center mb-4">
-              <BsLinkedin size={40} className="mx-auto my-2" />
-              <a href="https://www.linkedin.com/in/mihail-ruckiy-7a309323a/">Linkedin</a>
-            </div>
-          </div>
-        </section>
-      </MainContent>
-    </main>
-    <Footer />
-    <ThemeToggle client:load />
-  </Body>
+<html lang='en'>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<Body>
+		<Header title={SITE_TITLE} />
+		<main class='pt-20 font-heebo'>
+			<MainContent>
+				<section class='min-h-[85vh]'>
+					<h2 class='text-center text-2xl'>
+						You can always find me at the following addresses:
+					</h2>
+					<div
+						class='flex flex-wrap flex-col sm:flex-row sm:justify-between items-center gap-4 my-12 px-6'
+					>
+						<div class='p-2 text-center mb-4 sm:mx-auto'>
+							<BsTelegram size={60} className='mx-auto my-2' />
+							<a href='https://t.me/tnotu' target='_blank'>Telegram</a>
+						</div>
+						<div class='p-2 text-center mb-4 sm:mx-auto'>
+							<AiOutlineMail size={60} className='mx-auto my-2' />
+							<a href='mailto:moctagony@gmail.com' target='_blank'>Email</a>
+						</div>
+						<div class='p-2 text-center mb-4 sm:basis-full'>
+							<BsLinkedin size={60} className='mx-auto my-2' />
+							<a
+								href='https://www.linkedin.com/in/mihail-ruckiy-7a309323a/'
+								target='_blank'>Linkedin</a
+							>
+						</div>
+					</div>
+				</section>
+			</MainContent>
+		</main>
+		<Footer />
+		<ThemeToggle client:load />
+	</Body>
 </html>

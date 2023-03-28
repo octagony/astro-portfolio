@@ -6,8 +6,14 @@ title: Logoipsum
 tools:
   - HTML
   - SCSS
+  - Bootstrap
+  - jQuery
 createdAt: 1663138523826
 updatedAt: 1663138544071
 heroImage: /projects/logoipsum-image.jpg
 slug: logoipsum
+githubLink: 'https://github.com/octagony/Logoipsum'
+websiteLink: 'https://octagony.github.io/Logoipsum/'
 ---
+
+A simple landing page written using jQuery and Bootstrap
