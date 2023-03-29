@@ -1,56 +1,56 @@
 ---
-import { Image } from "@astrojs/image/components";
-import BaseHead from "../components/astro/BaseHead.astro";
-import Body from "../components/astro/Body.astro";
-import Footer from "../components/astro/Footer.astro";
-import Header from "../components/astro/Header.astro";
-import MainContent from "../components/astro/MainContent.astro";
-import ThemeToggle from "../components/tsx/ThemeToggleButton";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import { Image } from '@astrojs/image/components'
+import BaseHead from '../components/astro/BaseHead.astro'
+import Body from '../components/astro/Body.astro'
+import Footer from '../components/astro/Footer.astro'
+import Header from '../components/astro/Header.astro'
+import MainContent from '../components/astro/MainContent.astro'
+import ThemeToggle from '../components/tsx/ThemeToggleButton'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 
-const projects = (await Astro.glob("./projects/*.md")).sort(
-  (a: any, b: any) =>
-    new Date(b.frontmatter.createdAt).valueOf() -
-    new Date(a.frontmatter.createdAt).valueOf()
-);
+const projects = (await Astro.glob('./projects/*.md')).sort(
+	(a: any, b: any) =>
+		new Date(b.frontmatter.createdAt).valueOf() -
+		new Date(a.frontmatter.createdAt).valueOf()
+)
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <Body>
-    <Header title={SITE_TITLE} />
-    <main class="pt-20 font-heebo">
-      <MainContent>
-        <section>
-          <h2 class="text-3xl mb-8 text-center">My Projects</h2>
-          <ul class="flex flex-col gap-5 md:gap-10">
-            {
-              projects.map((project) => (
-                <li class="text-center">
-                  <Image
-                    src={project.frontmatter.heroImage}
-                    class="border border-slate-300 dark:border-neutral-700 rounded-xl"
-                    width={1440}
-                    aspectRatio={2.0}
-                    alt="project image"
-                  />
-                  <a href={project.url}>
-                    <div class="p-4 relative mt-3 text-lg sm:text-xl after:content-[''] after:block after:absolute after:h-1 after:bg-indigo-500 after:dark:bg-pink-500 after:bottom-0 after:right-4 after:-z-10 after:left-4 after:w-1/2 after:mx-auto after:rounded-xl hover:after:h-full hover:after:right-0 hover:after:left-0 hover:text-gray-50 transition-all duration-300 after:transition-all after:duration-300">
-                      {project.frontmatter.title} -{" "}
-                      {project.frontmatter.description}
-                    </div>
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
-        </section>
-      </MainContent>
-    </main>
-    <ThemeToggle client:load />
-    <Footer />
-  </Body>
+<html lang='en'>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<Body>
+		<Header title={SITE_TITLE} />
+		<main class='pt-20 font-heebo h-screen'>
+			<MainContent>
+				<section>
+					<h2 class='text-3xl mb-8 text-center'>My Projects</h2>
+					<ul class='flex flex-col gap-5 md:gap-10'>
+						{
+							projects.map(project => (
+								<li class='text-center'>
+									<Image
+										src={project.frontmatter.heroImage}
+										class='border border-slate-300 dark:border-neutral-700 rounded-xl'
+										width={1440}
+										aspectRatio={2.0}
+										alt='project image'
+									/>
+									<a href={project.url}>
+										<div class="p-4 relative mt-3 text-lg sm:text-xl after:content-[''] after:block after:absolute after:h-1 after:bg-indigo-500 after:dark:bg-pink-500 after:bottom-0 after:right-4 after:-z-10 after:left-4 after:w-1/2 after:mx-auto after:rounded-xl hover:after:h-full hover:after:right-0 hover:after:left-0 hover:text-gray-50 transition-all duration-300 after:transition-all after:duration-300">
+											{project.frontmatter.title} -{' '}
+											{project.frontmatter.description}
+										</div>
+									</a>
+								</li>
+							))
+						}
+					</ul>
+				</section>
+			</MainContent>
+		</main>
+		<ThemeToggle client:load />
+		<Footer />
+	</Body>
 </html>

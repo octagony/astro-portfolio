@@ -8,8 +8,14 @@ tools:
   - Tailwind
   - Zustand
   - CSS-Modules
+  - React Router
+  - Typescript
 createdAt: 1663138523826
 updatedAt: 1663138544071
 heroImage: /projects/yana.jpg
 slug: yet-another-notes-app
+githubLink: 'https://github.com/octagony/YANA'
+websiteLink: 'https://master--y-a-n-a.netlify.app/'
 ---
+
+YANA (decoded as Yet Another Notes App) is a standard note-taker that uses React in conjunction with React Router. The local storage is responsible for saving the notes
