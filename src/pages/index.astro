@@ -29,25 +29,25 @@ const projects = (await Astro.glob('./projects/*.md')).sort(
 					<div
 						class='text-center block sm:flex sm:justify-between items-center mb-10'
 					>
-						<h1 class='text-5xl mt-8'>
+						<h1 class='text-5xl my-10'>
 							Mikhail <span class='block mt-8'>Rutsky</span>
 						</h1>
-						<p class='text-xl mt-8'>
+						<p class='text-xl my-10'>
 							Frontend-developer <br />
 							{new Date().getFullYear() - 2000} years old, Minsk
 						</p>
 					</div>
 					<a
-						class='max-w-max mx-auto p-2 rounded-xl text-center block indent-1 text-white mb-8 text-base bg-indigo-500 dark:bg-pink-500 hover:scale-110 transition-all'
+						class='max-w-max mx-auto p-2 rounded-xl text-center block indent-1 text-white mb-y text-base bg-indigo-500 dark:bg-pink-500 hover:scale-110 transition-all'
 						href='/about'>Learn More about me</a
 					>
 				</section>
-				<section class='mb-8'>
+				<section class='my-10'>
 					<p class='text-3xl mb-8 text-center'>What i use</p>
 					<Skills />
 				</section>
 				<section>
-					<p class='text-3xl mb-8 text-center'>My Projects</p>
+					<p class='text-3xl my-10 text-center'>My Projects</p>
 					<ul class='flex flex-col gap-5 md:gap-10'>
 						{
 							projects.map(project => (

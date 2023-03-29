@@ -42,8 +42,10 @@ const {
 
 	<Body>
 		<Header />
-		<MainContent classname='mb-2 text-center pt-20 text-base'>
-			<div class='mb-4'>
+		<MainContent
+			classname='mb-2 text-center pt-20 text-base h-[calc(100vh-65px)]'
+		>
+			<div class='mb-6'>
 				{
 					heroImage && (
 						<img
@@ -70,13 +72,13 @@ const {
 					})
 				}
 			</div>
-			<hr class='border-top border-neutral-400 my-4' />
+			<hr class='border-top border-neutral-400 my-8' />
 			<slot />
 			<span
 				class='underline underline-offset-2 hover:text-pink-400 decoration-pink-400 text-2xl'
 			></span>
 			<div
-				class='flex sm:justify-evenly flex-col sm:flex-row gap-4 text-center mt-4 items-center'
+				class='flex sm:justify-evenly flex-col sm:flex-row gap-4 text-center mt-8 items-center'
 			>
 				<div
 					class='flex flex-row items-center gap-2 text-center bg-indigo-500 dark:bg-pink-600 p-2 rounded-xl text-base text-white hover:scale-110 transition-all'

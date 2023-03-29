@@ -23,47 +23,49 @@ import {
 		<Header title={SITE_TITLE} />
 		<main class='relative pt-20 font-heebo'>
 			<MainContent>
-				<section class='flex-col text-center h-[calc(100vh-150px)]'>
-					<div class='my-4'>
+				<section class='flex-col text-center'>
+					<div class='mt-8'>
 						<FiOctagon
-							className='opacity-30 animate-spin_logo mx-auto mb-4'
+							className='opacity-30 animate-spin_logo mx-auto mt-8'
 							size={150}
 						/>
-						<h1 class='text-4xl mt-3 leading-5'>Mikhail Rutsky</h1>
+						<h1 class='text-3xl sm:text-4xl mt-8 leading-5'>Mikhail Rutsky</h1>
 						<h3 class='text-2xl mt-5 leading-5'>@octagony</h3>
 					</div>
-					<p class='text-left text-base pt-4 first-letter:text-3xl'>
-						So, my name is Mikhail. I was born in Belarus, and now I live in
-						Minsk. I've been frontend-developing for about two years, and during
-						that time I have mastered a large number of tools - From basic HTML,
-						CSS and JS, to frameworks to modern tools for developing - Astro,
-						Remix, Next.js and more. I am always interested in trying new
-						frameworks and improve my skills.
-					</p>
-					<p class='text-left text-lg pt-4 first-letter:text-3xl'>
-						I am additionally learning the Rust programming language, as a
-						server solution for my projects, and for developing CLI
-						applications.
-					</p>
-					<p class='text-left text-lg pt-4 first-letter:text-3xl'>
-						As a working environment, i use different Linux distributions(i
-						prefer Arch/Debian-based distros), along with my <a
-							class='text-indigo-500 dark:text-pink-400'
-							href={NVIM_CONFIG}
-							target='_blank'>Neovim config</a
-						>, and <a
-							class='text-indigo-500 dark:text-pink-400'
-							href={DWM_CONFIG}
-							target='_blank'>DWM</a
-						> as window manager. I like to improve my configuration settings because
-						they allow me to grow wider.
-					</p>
-					<p class='text-left text-lg pt-4 first-letter:text-3xl'>
-						If you want to contact me, you can do it on the <a
-							class='text-indigo-500 dark:text-pink-400'
-							href='/contacts'>contact page</a
-						>. I will be glad to work together.
-					</p>
+					<div class='leading-8 text-left text-base'>
+						<p class='first-letter:text-3xl mt-8'>
+							So, my name is Mikhail. I was born in Belarus, and now I live in
+							Minsk. I've been frontend-developing for about two years, and
+							during that time I have mastered a large number of tools - From
+							basic HTML, CSS and JS, to frameworks to modern tools for
+							developing - Astro, Remix, Next.js and more. I am always
+							interested in trying new frameworks and improve my skills.
+						</p>
+						<p class='mt-8 first-letter:text-3xl'>
+							I am additionally learning the Rust programming language, as a
+							server solution for my projects, and for developing CLI
+							applications.
+						</p>
+						<p class='mt-8 first-letter:text-3xl'>
+							As a working environment, i use different Linux distributions(i
+							prefer Arch/Debian-based distros), along with my <a
+								class='text-indigo-500 dark:text-pink-400'
+								href={NVIM_CONFIG}
+								target='_blank'>Neovim config</a
+							>, and <a
+								class='text-indigo-500 dark:text-pink-400'
+								href={DWM_CONFIG}
+								target='_blank'>DWM</a
+							> as window manager. I like to improve my configuration settings because
+							they allow me to grow wider.
+						</p>
+						<p class='mt-8 first-letter:text-3xl'>
+							If you want to contact me, you can do it on the <a
+								class='text-indigo-500 dark:text-pink-400'
+								href='/contacts'>contact page</a
+							>. I will be glad to work together.
+						</p>
+					</div>
 				</section>
 			</MainContent>
 		</main>
