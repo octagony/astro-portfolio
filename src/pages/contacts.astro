@@ -19,28 +19,40 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 		<Header title={SITE_TITLE} />
 		<main class='pt-20 font-heebo'>
 			<MainContent>
-				<section class='min-h-[85vh]'>
+				<section class='min-h-[calc(100vh - 160px)]'>
 					<h2 class='text-center text-2xl'>
 						You can always find me at the following addresses:
 					</h2>
 					<div
 						class='flex flex-wrap flex-col sm:flex-row sm:justify-between items-center gap-4 my-12 px-6'
 					>
-						<div class='p-2 text-center mb-4 sm:mx-auto'>
-							<BsTelegram size={60} className='mx-auto my-2' />
-							<a href='https://t.me/tnotu' target='_blank'>Telegram</a>
-						</div>
-						<div class='p-2 text-center mb-4 sm:mx-auto'>
-							<AiOutlineMail size={60} className='mx-auto my-2' />
-							<a href='mailto:moctagony@gmail.com' target='_blank'>Email</a>
-						</div>
-						<div class='p-2 text-center mb-4 sm:basis-full'>
-							<BsLinkedin size={60} className='mx-auto my-2' />
-							<a
-								href='https://www.linkedin.com/in/mihail-ruckiy-7a309323a/'
-								target='_blank'>Linkedin</a
-							>
-						</div>
+						<a
+							href='https://t.me/tnotu'
+							target='_blank'
+							class='block mx-auto my-2 p-2 text-center mb-4 sm:mx-auto'
+							aria-label='Link to Telegram'
+						>
+							<BsTelegram size={60} className='mx-auto mb-3' />
+							Telegram
+						</a>
+						<a
+							class='block mx-auto my-2 p-2 text-center mb-4 sm:mx-auto'
+							href='mailto:moctagony@gmail.com'
+							target='_blank'
+							aria-label='Link to email'
+						>
+							<AiOutlineMail size={60} className='mx-auto mb-3' />
+							Email</a
+						>
+						<a
+							href='https://www.linkedin.com/in/mihail-ruckiy-7a309323a/'
+							target='_blank'
+							class='block p-2 text-center mb-4 sm:basis-full'
+							aria-label='Link to Linkedin'
+						>
+							<BsLinkedin size={60} className='mx-auto mb-3' />
+							Linkedin</a
+						>
 					</div>
 				</section>
 			</MainContent>
