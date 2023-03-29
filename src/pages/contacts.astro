@@ -7,13 +7,19 @@ import Footer from '../components/astro/Footer.astro'
 import Header from '../components/astro/Header.astro'
 import MainContent from '../components/astro/MainContent.astro'
 import ThemeToggle from '../components/tsx/ThemeToggleButton'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
+import {
+	LINKEDIN_LINK,
+	MAIL_LINK,
+	SITE_DESCRIPTION,
+	SITE_TITLE,
+	TELEGRAM_LINK,
+} from '../config'
 ---
 
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title='Contacts' description={SITE_DESCRIPTION} />
 	</head>
 	<Body>
 		<Header title={SITE_TITLE} />
@@ -27,7 +33,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 						class='flex flex-wrap flex-col sm:flex-row sm:justify-between items-center gap-4 my-12 px-6'
 					>
 						<a
-							href='https://t.me/tnotu'
+							href={TELEGRAM_LINK}
 							target='_blank'
 							class='block mx-auto my-2 p-2 text-center mb-4 sm:mx-auto'
 							aria-label='Link to Telegram'
@@ -37,7 +43,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 						</a>
 						<a
 							class='block mx-auto my-2 p-2 text-center mb-4 sm:mx-auto'
-							href='mailto:moctagony@gmail.com'
+							href={MAIL_LINK}
 							target='_blank'
 							aria-label='Link to email'
 						>
@@ -45,7 +51,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 							Email</a
 						>
 						<a
-							href='https://www.linkedin.com/in/mihail-ruckiy-7a309323a/'
+							href={LINKEDIN_LINK}
 							target='_blank'
 							class='block p-2 text-center mb-4 sm:basis-full'
 							aria-label='Link to Linkedin'
