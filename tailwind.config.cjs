@@ -36,11 +36,25 @@ module.exports = {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' },
 				},
+				scaleIn: {
+					'0%': {
+						opacity: 0,
+						transform: 'scale(0.9)',
+					},
+					'50%': {
+						opacity: 0.3,
+					},
+					'100%': {
+						opacity: 1,
+						transform: 'scale(1)',
+					},
+				},
 			},
 			animation: {
 				scroll: 'scroll 10s linear infinite',
 				scroll_revere: 'scroll_reverse 10s linear infinite',
 				spin_logo: 'spin_logo 25s infinite',
+				scaleIn: 'scaleIn .35s ease-in-out',
 			},
 		},
 	},
