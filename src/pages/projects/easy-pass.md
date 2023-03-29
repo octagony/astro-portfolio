@@ -9,7 +9,7 @@ tools:
   - Next.js
   - Firebase
   - Typescript
-createdAt: 1663138523826
+createdAt: 1663138523828
 updatedAt: 1663138544071
 heroImage: /projects/easy-pass.jpg
 slug: easy-pass

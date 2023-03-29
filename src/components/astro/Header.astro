@@ -1,27 +1,27 @@
 ---
-import HeaderLink from './HeaderLink.astro'
 import { IoLogoGithub } from 'react-icons/io'
-import DropdownMenu from '../tsx/DropdownMenu';
+import DropdownMenu from '../tsx/DropdownMenu'
+import HeaderLink from './HeaderLink.astro'
 ---
 
-<header class="fixed bg-gradient-to-br from-indigo-200 to-indigo-100 dark:bg-gradient-to-tr dark:from-neutral-900 dark:to-pink-900 w-full p-2 z-20 font-bold dark:bg-neutral-900">
-  <div class="mx-auto max-w-3xl">
-    <nav
-      class="flex py-2 justify-between items-center gap-3 text-base"
-    >
-      <div class="hidden md:flex md:justify-between w-full px-4">
-        <HeaderLink href="/">Home</HeaderLink>
-        <HeaderLink href="/about">About me</HeaderLink>
-        <HeaderLink href="/projects">Projects</HeaderLink>
-        <HeaderLink href="/contacts">Contacts</HeaderLink>
-        <HeaderLink href="https://github.com/octagony" target="_blank">
-          <IoLogoGithub />
-            GitHub
-        </HeaderLink>
-      </div>
-      <div class="md:hidden">
-        <DropdownMenu client:visible/>
-      </div>
-    </nav>
-  </div>
+<header
+	class='fixed bg-gradient-to-br from-indigo-100 to-indigo-300 dark:bg-gradient-to-br dark:from-neutral-900 dark:to-pink-900 w-full p-2 z-20 font-bold dark:bg-neutral-900'
+>
+	<div class='mx-auto max-w-3xl'>
+		<nav class='flex py-2 justify-between items-center gap-3 text-base'>
+			<div class='hidden md:flex md:justify-between w-full px-4'>
+				<HeaderLink href='/'>Home</HeaderLink>
+				<HeaderLink href='/about'>About me</HeaderLink>
+				<HeaderLink href='/projects'>Projects</HeaderLink>
+				<HeaderLink href='/contacts'>Contacts</HeaderLink>
+				<HeaderLink href='https://github.com/octagony' target='_blank'>
+					<IoLogoGithub />
+					GitHub
+				</HeaderLink>
+			</div>
+			<div class='md:hidden'>
+				<DropdownMenu client:visible />
+			</div>
+		</nav>
+	</div>
 </header>

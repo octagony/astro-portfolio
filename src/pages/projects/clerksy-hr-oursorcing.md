@@ -6,7 +6,7 @@ title: Clerksy
 tools:
   - HTML
   - SCSS
-createdAt: 1663138523826
+createdAt: 1663138523823
 updatedAt: 1663138544071
 heroImage: /projects/clerksy-image.jpg
 slug: clerksky-hr-outsorcing

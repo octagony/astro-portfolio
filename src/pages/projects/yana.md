@@ -10,7 +10,7 @@ tools:
   - CSS-Modules
   - React Router
   - Typescript
-createdAt: 1663138523826
+createdAt: 1663138523827
 updatedAt: 1663138544071
 heroImage: /projects/yana.jpg
 slug: yet-another-notes-app
