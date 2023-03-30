@@ -10,10 +10,10 @@ tools:
   - jQuery
 createdAt: 1663138523826
 updatedAt: 1663138544071
-heroImage: /projects/logoipsum-image.jpg
+heroImage: /projects/logoipsum-img.jpeg
 slug: logoipsum
-githubLink: 'https://github.com/octagony/Logoipsum'
-websiteLink: 'https://octagony.github.io/Logoipsum/'
+githubLink: "https://github.com/octagony/Logoipsum"
+websiteLink: "https://octagony.github.io/Logoipsum/"
 ---
 
 A simple landing page written using jQuery and Bootstrap

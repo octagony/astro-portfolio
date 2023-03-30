@@ -8,10 +8,10 @@ tools:
   - SCSS
 createdAt: 1663138523823
 updatedAt: 1663138544071
-heroImage: /projects/clerksy-image.jpg
+heroImage: /projects/clerksy-img.jpeg
 slug: clerksky-hr-outsorcing
-githubLink: 'https://github.com/octagony/ClerksyLanding'
-websiteLink: 'https://octagony.github.io/ClerksyLanding/'
+githubLink: "https://github.com/octagony/ClerksyLanding"
+websiteLink: "https://octagony.github.io/ClerksyLanding/"
 ---
 
 Clerksy build people operations software for everyday companies. This basic landing page made using only HTML and CSS
