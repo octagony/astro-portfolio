@@ -17,15 +17,15 @@ const projects = (await Astro.glob("./projects/*.md")).sort(
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title="Not found" description={SITE_DESCRIPTION} />
   </head>
   <Body>
     <Header />
-    <main class="pt-20">
+    <main class="pt-20 leading-10">
       <MainContent>
-        <section>
-          <h1 class="text-3xl text-center">Wow, you find treasure!</h1>
-          <div class="text-center py-4">
+        <section class="mt-20">
+          <h1 class="text-3xl font-bold text-center">Wow, you find treasure!</h1>
+          <div class="text-xl text-center mt-4 py-4">
             Nah, just kidding. Go back to
             <a class="text-cyan-700 dark:text-pink-400" href="/">main page!</a>
           </div>

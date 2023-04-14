@@ -1,6 +1,6 @@
 import { Menu, Transition } from '@headlessui/react'
 import React, { Fragment } from 'react'
-import { IoClose, IoMenu } from 'react-icons/io5'
+import { IoClose, IoMenu } from 'react-icons/io5/index.js'
 import { HOMEPAGE_URL } from '../../config'
 import DropdownMenuItem from './DropdownMenuItem'
 import MenuButton from './MenuButton'

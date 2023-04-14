@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa/index.js";
 
 const ThemeToggle = () => {
   const [isMounted, setIsMounted] = useState(false);
