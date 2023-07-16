@@ -22,15 +22,7 @@ export interface Props {
 }
 
 const {
-	content: {
-		title,
-		description,
-		pubDate,
-		heroImage,
-		tools,
-		githubLink,
-		websiteLink,
-	},
+	content: { title, description, heroImage, tools, githubLink, websiteLink },
 } = Astro.props
 ---
 
@@ -57,9 +49,8 @@ const {
 						/>
 					)
 				}
-				<h1 class='text-3xl my-4 font-heebo'>{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
-				{description}
+				<h1 class='text-3xl font-heebo mt-6'>{title}</h1>
+				<span class='mt-4 block'>{description}</span>
 			</div>
 			<div class='flex flex-wrap justify-center items-center gap-4'>
 				{

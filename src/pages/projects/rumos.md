@@ -1,15 +1,14 @@
 ---
-description: HR Outsorcing
+description: CLI utility for controlling screen brightness
 public: true
 layout: ../../layouts/BlogPost.astro
-title: Clerksy
+title: Rumos
 tools:
-  - HTML
-  - SCSS
-createdAt: 1663138523823
-updatedAt: 1663138544071
-heroImage: /projects/clerksy-img.jpeg
-slug: clerksy-hr-outsorcing
+  - Rust
+createdAt: 1663138523829
+updatedAt: 1663138544090
+heroImage: /projects/rumos.jpeg
+slug: rumos
 githubLink: 'https://github.com/octagony/ClerksyLanding'
 websiteLink: 'https://octagony.github.io/ClerksyLanding/'
 ---
