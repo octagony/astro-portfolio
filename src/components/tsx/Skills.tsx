@@ -31,7 +31,10 @@ const Skills = () => {
 					<div className='w-[200%] flex items-center h-12 justify-around absolute left-0 animate-scroll gap-5'>
 						{skills.slice(0, skills.length / 2).map((skill, idx) => {
 							return (
-								<div key={idx} className='flex justify-center items-start w-20'>
+								<div
+									key={idx}
+									className='flex justify-center items-start w-20 mr-4 ml-4'
+								>
 									<p>{skill}</p>
 								</div>
 							)
@@ -44,7 +47,10 @@ const Skills = () => {
 					<div className='w-[200%] flex items-center h-12 justify-around absolute left-0  animate-scroll_revere gap-5'>
 						{skills.slice(skills.length / 2, -1).map((skill, idx) => {
 							return (
-								<div key={idx} className='flex justify-center items-start w-20'>
+								<div
+									key={idx}
+									className='flex justify-center items-start w-20 mr-4 ml-4'
+								>
 									<p>{skill}</p>
 								</div>
 							)

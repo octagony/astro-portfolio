@@ -51,9 +51,9 @@ module.exports = {
 				},
 			},
 			animation: {
-				scroll: 'scroll 10s linear infinite',
-				scroll_revere: 'scroll_reverse 10s linear infinite',
-				spin_logo: 'spin_logo 25s infinite',
+				scroll: 'scroll 10s linear 0s infinite normal',
+				scroll_revere: 'scroll_reverse 10s linear 0s infinite normal',
+				spin_logo: 'spin_logo 25s linear 0s infinite normal',
 				scaleIn: 'scaleIn .35s ease-in-out',
 			},
 		},
