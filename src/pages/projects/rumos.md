@@ -13,4 +13,4 @@ githubLink: 'https://github.com/octagony/ClerksyLanding'
 websiteLink: 'https://octagony.github.io/ClerksyLanding/'
 ---
 
-Clerksy build people operations software for everyday companies. This basic landing page made using only HTML and CSS
+Rumos is a CLI utility for controlling the brightness level of the screen. The utility is written in Rust, covered by tests and uses commands and arguments

@@ -6,14 +6,11 @@ import Body from '../components/astro/Body.astro'
 import Footer from '../components/astro/Footer.astro'
 import Header from '../components/astro/Header.astro'
 import MainContent from '../components/astro/MainContent.astro'
-import ThemeToggle from '../components/tsx/ThemeToggleButton'
 
 export interface Props {
 	content: {
 		title: string
-		pubDate?: string
 		description?: string
-		updatedDate?: string
 		heroImage?: string
 		tools: string[]
 		githubLink: string
@@ -56,7 +53,7 @@ const {
 				{
 					tools.map(tool => {
 						return (
-							<span class='bg-indigo-500 dark:bg-pink-600 p-2 rounded-xl text-base text-white'>
+							<span class='bg-indigo-500 p-2 rounded-xl text-base text-white'>
 								{tool}
 							</span>
 						)
@@ -72,13 +69,13 @@ const {
 				class='flex sm:justify-evenly flex-col sm:flex-row gap-4 text-center mt-8 items-center'
 			>
 				<div
-					class='flex flex-row items-center gap-2 text-center bg-indigo-500 dark:bg-pink-600 p-2 rounded-xl text-base text-white hover:scale-110 transition-all'
+					class='flex flex-row items-center gap-2 text-center bg-indigo-500 p-2 rounded-xl text-base text-white hover:scale-110 transition-all'
 				>
 					<AiFillGithub />
 					<a href={githubLink} target='_blank'>Link to project on Github</a>
 				</div>
 				<div
-					class='flex flex-row items-center gap-2 bg-indigo-500 dark:bg-pink-600 p-2 rounded-xl text-base text-white hover:scale-110 transition-all'
+					class='flex flex-row items-center gap-2 bg-indigo-500 p-2 rounded-xl text-base text-white hover:scale-110 transition-all'
 				>
 					<CgWebsite />
 					<a href={websiteLink} target='_blank'>Link to website project</a>
@@ -87,5 +84,4 @@ const {
 		</MainContent>
 	</Body>
 	<Footer />
-	<ThemeToggle client:load />
 </html>

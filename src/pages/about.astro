@@ -5,7 +5,6 @@ import Body from '../components/astro/Body.astro'
 import Footer from '../components/astro/Footer.astro'
 import Header from '../components/astro/Header.astro'
 import MainContent from '../components/astro/MainContent.astro'
-import ThemeToggle from '../components/tsx/ThemeToggleButton'
 import {
 	DWM_CONFIG,
 	NVIM_CONFIG,
@@ -49,11 +48,11 @@ import {
 						<p class='mt-8 first-letter:text-3xl'>
 							As a working environment, i use different Linux distributions(i
 							prefer Arch/Debian-based distros), along with my <a
-								class='text-indigo-500 dark:text-pink-400'
+								class='text-indigo-500'
 								href={NVIM_CONFIG}
 								target='_blank'>Neovim config</a
 							>, and <a
-								class='text-indigo-500 dark:text-pink-400'
+								class='text-indigo-500'
 								href={DWM_CONFIG}
 								target='_blank'>DWM</a
 							> as window manager. I like to improve my configuration settings because
@@ -61,7 +60,7 @@ import {
 						</p>
 						<p class='mt-8 first-letter:text-3xl'>
 							If you want to contact me, you can do it on the <a
-								class='text-indigo-500 dark:text-pink-400'
+								class='text-indigo-500'
 								href='/contacts'>contact page</a
 							>. I will be glad to work together.
 						</p>
@@ -70,6 +69,5 @@ import {
 			</MainContent>
 		</main>
 		<Footer />
-		<ThemeToggle client:load />
 	</Body>
 </html>

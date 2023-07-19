@@ -22,7 +22,7 @@ const Skills = () => {
 		'Gulp',
 		'Vite',
 		'Figma',
-		'Preact',
+		'Rust',
 	]
 	return (
 		<>

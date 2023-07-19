@@ -1,38 +1,32 @@
 ---
-import BaseHead from "../components/astro/BaseHead.astro";
-import Header from "../components/astro/Header.astro";
-import Body from "../components/astro/Body.astro";
-import Footer from "../components/astro/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import ThemeToggle from "../components/tsx/ThemeToggleButton";
-import MainContent from "../components/astro/MainContent.astro";
-
-const projects = (await Astro.glob("./projects/*.md")).sort(
-  (a: any, b: any) =>
-    new Date(b.frontmatter.createdAt).valueOf() -
-    new Date(a.frontmatter.createdAt).valueOf()
-);
+import BaseHead from '../components/astro/BaseHead.astro'
+import Header from '../components/astro/Header.astro'
+import Body from '../components/astro/Body.astro'
+import Footer from '../components/astro/Footer.astro'
+import { SITE_DESCRIPTION } from '../config'
+import MainContent from '../components/astro/MainContent.astro'
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title="Not found" description={SITE_DESCRIPTION} />
-  </head>
-  <Body>
-    <Header />
-    <main class="pt-20 leading-10">
-      <MainContent>
-        <section class="mt-20">
-          <h1 class="text-3xl font-bold text-center">Wow, you find treasure!</h1>
-          <div class="text-xl text-center mt-4 py-4">
-            Nah, just kidding. Go back to
-            <a class="text-cyan-700 dark:text-pink-400" href="/">main page!</a>
-          </div>
-        </section>
-      </MainContent>
-    </main>
-    <Footer />
-    <ThemeToggle client:load />
-  </Body>
+<html lang='en'>
+	<head>
+		<BaseHead title='Not found' description={SITE_DESCRIPTION} />
+	</head>
+	<Body>
+		<Header />
+		<main class='pt-20 leading-10'>
+			<MainContent>
+				<section class='mt-20'>
+					<h1 class='text-3xl font-bold text-center'>
+						Wow, you find treasure!
+					</h1>
+					<div class='text-xl text-center mt-4 py-4'>
+						Nah, just kidding. Go back to
+						<a class='text-cyan-700' href='/'>main page!</a>
+					</div>
+				</section>
+			</MainContent>
+		</main>
+		<Footer />
+	</Body>
 </html>
