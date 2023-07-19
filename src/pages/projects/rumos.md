@@ -9,8 +9,8 @@ createdAt: 1663138523829
 updatedAt: 1663138544090
 heroImage: /projects/rumos.jpeg
 slug: rumos
-githubLink: 'https://github.com/octagony/ClerksyLanding'
-websiteLink: 'https://octagony.github.io/ClerksyLanding/'
+githubLink: 'https://github.com/octagony/rumos'
+websiteLink: 'https://github.com/octagony/rumos'
 ---
 
 Rumos is a CLI utility for controlling the brightness level of the screen. The utility is written in Rust, covered by tests and uses commands and arguments
