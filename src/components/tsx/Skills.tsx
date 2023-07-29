@@ -11,6 +11,8 @@ const Skills = () => {
 		'JavaScript',
 		'Typescript',
 		'jQuery',
+		'Vue',
+		'Rust',
 		'React',
 		'Router',
 		'Redux',
@@ -22,7 +24,6 @@ const Skills = () => {
 		'Gulp',
 		'Vite',
 		'Figma',
-		'Rust',
 	]
 	return (
 		<>
@@ -44,7 +45,7 @@ const Skills = () => {
 			</div>
 			<div className='text-lg flex items-center mb-5 justify-center'>
 				<div className='w-[200%] h-12 border-t border-b overflow-hidden border-gray-500 relative'>
-					<div className='w-[200%] flex items-center h-12 justify-around absolute left-0  animate-scroll_revere gap-5'>
+					<div className='w-[200%] flex items-center h-12 justify-around absolute left-0  animate-scroll_reverse gap-5'>
 						{skills.slice(skills.length / 2, -1).map((skill, idx) => {
 							return (
 								<div
