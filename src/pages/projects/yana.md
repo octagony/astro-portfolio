@@ -5,11 +5,13 @@ layout: ../../layouts/BlogPost.astro
 title: YANA
 tools:
   - React
+  - Typescript
   - Tailwind
   - Zustand
-  - CSS-Modules
-  - React Router
-  - Typescript
+  - Wouter
+  - Firebase
+  - React Markdown
+  - React Slick
 createdAt: 1663138523831
 updatedAt: 1663138544071
 heroImage: /projects/yana-img.jpeg
@@ -18,4 +20,4 @@ githubLink: 'https://github.com/octagony/YANA'
 websiteLink: 'https://master--y-a-n-a.netlify.app/'
 ---
 
-YANA (decoded as Yet Another Notes App) is a standard note-taker that uses React in conjunction with React Router. The local storage is responsible for saving the notes
+YANA (stands for Yet Another Notes App) is a standard notepad that uses React in conjunction with Wouter, Firebase, and Zustand. Notes are displayed on the home page both in a grid and in a slider. Additionally, notes can be written in Markdown syntax
