@@ -7,9 +7,6 @@ import addClasses from "rehype-add-classes";
 import react from "@astrojs/react";
 
 // https://astro.build/config
-import image from "@astrojs/image";
-
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
@@ -19,9 +16,6 @@ export default defineConfig({
     mdx(),
     sitemap(),
     react(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     tailwind(),
   ],
   markdown: {

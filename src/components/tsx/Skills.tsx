@@ -2,8 +2,6 @@ import React from 'react'
 
 const Skills = () => {
 	const skills = [
-		'HTML',
-		'CSS',
 		'SCSS/SASS',
 		'Modules',
 		'Tailwind',

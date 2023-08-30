@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components'
+import { Image } from 'astro:assets'
 import BaseHead from '../components/astro/BaseHead.astro'
 import Body from '../components/astro/Body.astro'
 import Footer from '../components/astro/Footer.astro'
@@ -23,7 +23,7 @@ const projects = (await Astro.glob('./projects/*.md')).sort(
 	</head>
 	<Body>
 		<Header title={SITE_TITLE} />
-		<main class='pt-20 font-heebo'>
+		<main class='pt-20 font-heebo' transition:animate="slide">
 			<MainContent>
 				<section>
 					<div
@@ -38,6 +38,7 @@ const projects = (await Astro.glob('./projects/*.md')).sort(
 						</p>
 					</div>
 					<a
+						transition-name="about"
 						class='max-w-max mx-auto p-4 rounded-xl text-center block indent-1 text-white mb-y text-base bg-indigo-500 hover:scale-110 transition-all'
 						href='/about'>Learn more about me</a
 					>
@@ -48,19 +49,24 @@ const projects = (await Astro.glob('./projects/*.md')).sort(
 						<Skills />
 					</div>
 				</section>
-				<section>
+				<section >
 					<p class='text-3xl mt-10 text-center'>My Projects</p>
 					<ul class='flex flex-col gap-5 md:gap-10 mt-10'>
 						{
 							projects.map(project => (
 								<li class='text-center my-4'>
+									<a href={project.url} aria-hidden="true" tabindex="-1">
 									<Image
 										src={project.frontmatter.heroImage}
 										class='border border-slate-300 dark:border-neutral-700 rounded-xl'
 										width={1440}
+										height={'100%'}
 										aspectRatio={2.0}
 										alt='project image'
+										transition-name={`image-${project.frontmatter.title}`}
+										
 									/>
+									</a>
 									<a href={project.url}>
 										<div class="p-4 relative mt-3 text-lg sm:text-xl after:content-[''] after:block after:absolute after:h-1 after:bg-indigo-500  after:bottom-0 after:right-1 after:-z-10 after:left-1 after:w-full after:sm:w-1/2 after:mx-auto after:rounded-xl hover:after:h-full hover:after:right-0 hover:after:left-0 hover:text-gray-50 transition-all duration-300 after:transition-all after:duration-300">
 											{project.frontmatter.title}
