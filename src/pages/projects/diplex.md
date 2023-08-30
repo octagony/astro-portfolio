@@ -9,7 +9,7 @@ tools:
   - jQuery
 createdAt: 1663138523826
 updatedAt: 1663138544071
-heroImage: /projects/diplex-img.jpeg
+heroImage: /projectsImages/diplex-img.jpeg
 slug: diplex-crypto
 githubLink: "https://github.com/octagony/diplexSite"
 websiteLink: "https://octagony.github.io/diplexSite/"

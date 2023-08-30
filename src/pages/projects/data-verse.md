@@ -8,7 +8,7 @@ tools:
   - Typescript
 createdAt: 1663138523826
 updatedAt: 1663138544072
-heroImage: /projects/data-verse.jpeg
+heroImage: /projectsImages/data-verse.jpeg
 slug: data-verse-extensions
 githubLink: 'https://github.com/octagony/data-verse'
 websiteLink: 'https://addons.mozilla.org/en-US/firefox/addon/dataverse_extension/'

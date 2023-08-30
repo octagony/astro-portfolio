@@ -10,7 +10,7 @@ tools:
   - jQuery
 createdAt: 1663138523826
 updatedAt: 1663138544071
-heroImage: /projects/ugmonk-img.jpeg
+heroImage: /projectsImages/ugmonk-img.jpeg
 slug: ugmonk-brand-shop
 githubLink: "https://github.com/octagony/UGMONK"
 websiteLink: "https://octagony.github.io/UGMONK/"

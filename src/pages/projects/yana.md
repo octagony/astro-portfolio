@@ -14,7 +14,7 @@ tools:
   - React Slick
 createdAt: 1663138523831
 updatedAt: 1663138544071
-heroImage: /projects/yana-img.jpeg
+heroImage: /projectsImages/yana-img.jpeg
 slug: yet-another-notes-app
 githubLink: 'https://github.com/octagony/YANA'
 websiteLink: 'https://master--y-a-n-a.netlify.app/'

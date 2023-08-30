@@ -7,7 +7,7 @@ tools:
   - Rust
 createdAt: 1663138523829
 updatedAt: 1663138544090
-heroImage: /projects/rumos.jpeg
+heroImage: /projectsImages/rumos.jpeg
 slug: rumos
 githubLink: 'https://github.com/octagony/rumos'
 websiteLink: 'https://github.com/octagony/rumos'

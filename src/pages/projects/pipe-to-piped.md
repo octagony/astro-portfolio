@@ -9,7 +9,7 @@ tools:
   - JavaScript
 createdAt: 1663138523825
 updatedAt: 1663138544070
-heroImage: /projects/pipe-to-piped-img.jpeg
+heroImage: /projectsImages/pipe-to-piped-img.jpeg
 slug: pipe-to-piped-extensions
 githubLink: 'https://github.com/octagony/firefox-to-piped-extension'
 websiteLink: 'https://addons.mozilla.org/en-US/firefox/addon/pipe-to-piped/'

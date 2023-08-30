@@ -8,7 +8,7 @@ tools:
   - SCSS
 createdAt: 1663138523823
 updatedAt: 1663138544071
-heroImage: /projects/clerksy-img.jpeg
+heroImage: /projectsImages/clerksy-img.jpeg
 slug: clerksy-hr-outsorcing
 githubLink: 'https://github.com/octagony/ClerksyLanding'
 websiteLink: 'https://octagony.github.io/ClerksyLanding/'

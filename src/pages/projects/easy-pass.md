@@ -11,7 +11,7 @@ tools:
   - Typescript
 createdAt: 1663138523832
 updatedAt: 1663138544071
-heroImage: /projects/easypass-img.jpeg
+heroImage: /projectsImages/easypass-img.jpeg
 slug: easy-pass
 githubLink: 'https://github.com/octagony/random-password-generator'
 websiteLink: 'https://random-password-generator-3qv522ktm-octagony.vercel.app/'
