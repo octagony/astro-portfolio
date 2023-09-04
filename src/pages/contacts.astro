@@ -1,6 +1,6 @@
 ---
-import { AiOutlineMail } from 'react-icons/ai/index.js'
-import { BsLinkedin, BsTelegram } from 'react-icons/bs/index.js'
+import { MdMarkEmailRead } from 'react-icons/md/index.js'
+import { BsLinkedin,BsTelegram } from 'react-icons/bs/index.js'
 import BaseHead from '../components/astro/BaseHead.astro'
 import Body from '../components/astro/Body.astro'
 import Footer from '../components/astro/Footer.astro'
@@ -25,38 +25,38 @@ import {
 		<Header title={SITE_TITLE} />
 		<main class='pt-20 leading-10' transition:animate="slide">
 			<MainContent classname='flex flex-col'>
-				<section class='mt-1'>
-					<h2 class='font-bold text-center sm:text-2xl text-xl leading-7'>
+				<section class='mt-16'>
+					<h2 class='font-bold text-center text-xl sm:text-2xl leading-8'>
 						You can always find me at the following addresses:
 					</h2>
 					<div
-						class='font-bold flex flex-wrap flex-col sm:flex-row sm:justify-between items-center gap-4 my-12 px-6'
+						class='font-bold grid place-items-center grid-rows-3 gap-4 mt-8 text-xl sm:text-2xl'
 					>
 						<a
 							href={TELEGRAM_LINK}
 							target='_blank'
-							class='block mx-auto my-2 p-2 text-center mb-4 sm:mx-auto'
+							class="w-52 flex justify-center items-center gap-4 my-4 p-4 text-center hover:scale-125 transition-all hover:bg-indigo-400 hover:rounded-2xl hover:text-gray-100 "
 							aria-label='Link to Telegram'
 						>
-							<BsTelegram size={60} className='mx-auto mb-3' />
+							<BsTelegram size={40}  />
 							Telegram
 						</a>
 						<a
-							class='block mx-auto my-2 p-2 text-center mb-4 sm:mx-auto'
+							class="w-52 flex justify-center items-center gap-4 my-4 p-4 text-center hover:scale-125 transition-all hover:bg-indigo-400 hover:rounded-2xl hover:text-gray-100 "
 							href={MAIL_LINK}
 							target='_blank'
 							aria-label='Link to email'
 						>
-							<AiOutlineMail size={60} className='mx-auto mb-3' />
-							Email</a
+							<MdMarkEmailRead size={40} className='mb-3' />
+							<span>Mail Add</span></a
 						>
 						<a
 							href={LINKEDIN_LINK}
 							target='_blank'
-							class='block p-2 text-center mb-4 sm:basis-full'
+							class="w-48 flex justify-center items-center gap-4 my-4 p-4 text-center hover:scale-125 transition-all hover:bg-indigo-400 hover:rounded-2xl hover:text-gray-100"
 							aria-label='Link to Linkedin'
 						>
-							<BsLinkedin size={60} className='mx-auto mb-3' />
+							<BsLinkedin size={40} />
 							Linkedin</a
 						>
 					</div>
