@@ -33,7 +33,7 @@ const {
 	<Body>
 		<Header />
 		<MainContent
-			classname='mb-2 text-center pt-20 text-base font-heebo leading-6'
+			classname='mb-2 text-center pt-20 text-base'
 		>
 			<div class='mb-6' >
 				{
@@ -48,14 +48,14 @@ const {
 						/>
 					)
 				}
-				<h1 class='text-3xl font-heebo mt-6'>{title}</h1>
+				<h1 class='text-3xl font-bold mt-6'>{title}</h1>
 				<span class='mt-4 block'>{description}</span>
 			</div>
 			<div class='flex flex-wrap justify-center items-center gap-4'>
 				{
 					tools.map(tool => {
 						return (
-							<span class='bg-indigo-500 p-2 rounded-xl text-base text-white'>
+							<span class='bg-indigo-500 p-2 rounded-xl text-base text-white font-bold'>
 								{tool}
 							</span>
 						)
@@ -68,7 +68,7 @@ const {
 				class='underline underline-offset-2 hover:text-pink-400 decoration-pink-400 text-2xl'
 			></span>
 			<div
-				class='flex sm:justify-evenly flex-col sm:flex-row gap-4 text-center mt-8 items-center'
+				class='font-bold flex sm:justify-evenly flex-col sm:flex-row gap-4 text-center mt-8 items-center'
 			>
 				<div
 					class='flex flex-row items-center gap-2 text-center bg-indigo-500 p-2 rounded-xl text-base text-white hover:scale-110 transition-all'
