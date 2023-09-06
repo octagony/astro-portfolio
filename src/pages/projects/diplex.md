@@ -1,7 +1,7 @@
 ---
 description: Crypto Theme
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: Diplex
 tools:
   - HTML

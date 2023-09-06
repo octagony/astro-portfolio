@@ -1,7 +1,7 @@
 ---
 description: Generate random data for registration
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: Data Verse
 tools:
   - Vue

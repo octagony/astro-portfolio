@@ -1,7 +1,7 @@
 ---
 description: Password Generator
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: Easy/Pass
 tools:
   - React

@@ -1,7 +1,7 @@
 ---
 description: Starter Page
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: Logoipsum
 tools:
   - HTML

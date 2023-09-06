@@ -1,7 +1,7 @@
 ---
 description: Yet Another Notes App
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: YANA
 tools:
   - React

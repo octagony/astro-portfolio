@@ -1,7 +1,7 @@
 ---
 description: HR Outsorcing
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: Clerksy
 tools:
   - HTML

@@ -1,7 +1,7 @@
 ---
 description: Redirect links from youtube to a stable Pipe
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: Pipe to Piped
 tools:
   - HTML

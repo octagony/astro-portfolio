@@ -1,7 +1,7 @@
 ---
 description: CLI utility for controlling screen brightness
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: Rumos
 tools:
   - Rust

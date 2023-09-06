@@ -1,7 +1,7 @@
 ---
 description: Brand Shop
 public: true
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/ProjectLayout.astro
 title: UGMONK
 tools:
   - HTML
